@@ -6,13 +6,12 @@
 
 [AST](https://zh.wikipedia.org/wiki/%E6%8A%BD%E8%B1%A1%E8%AA%9E%E6%B3%95%E6%A8%B9)[维基百科]:在[计算机科学](https://zh.wikipedia.org/wiki/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6)中，**抽象语法树**（**A**bstract **S**yntax **T**ree，AST），或简称**语法树**（Syntax tree），是[源代码](https://zh.wikipedia.org/wiki/%E6%BA%90%E4%BB%A3%E7%A0%81)[语法](https://zh.wikipedia.org/wiki/%E8%AF%AD%E6%B3%95%E5%AD%A6)结构的一种抽象表示。它以[树状](https://zh.wikipedia.org/wiki/%E6%A0%91_(%E5%9B%BE%E8%AE%BA))的形式表现[编程语言](https://zh.wikipedia.org/wiki/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80)的语法结构，树上的每个节点都表示源代码中的一种结构。之所以说语法是“抽象”的，是因为这里的语法并不会表示出真实语法中出现的每个细节。比如，嵌套括号被隐含在树的结构中，并没有以节点的形式呈现；而类似于 `if-condition-then` 这样的条件跳转语句，可以使用带有两个分支的节点来表示。
 
-![img](.\images\400px-Abstract_syntax_tree_for_Euclidean_algorithm.svg.png)
+![400px-abstract_syntax_tree_for_euclidean_algorithm svg](https://user-images.githubusercontent.com/38183707/43043684-7edf0c02-8dcb-11e8-95d2-1b4dd70a675e.png)
 
 和抽象语法树相对的是具体语法树（通常称作[分析树](https://zh.wikipedia.org/wiki/%E5%88%86%E6%9E%90%E6%A0%91)）。一般的，在源代码的翻译和[编译](https://zh.wikipedia.org/wiki/%E7%BC%96%E8%AF%91)过程中，[语法分析器](https://zh.wikipedia.org/wiki/%E8%AA%9E%E6%B3%95%E5%88%86%E6%9E%90%E5%99%A8)创建出分析树。一旦AST被创建出来，在后续的处理过程中，比如[语义分析](https://zh.wikipedia.org/wiki/%E8%AF%AD%E4%B9%89%E5%88%86%E6%9E%90)阶段，会添加一些信息。
 
 如何利用AST解析function ast(){}，更改后重新恢复
-
-![003](.\images\003.PNG)
+![003](https://user-images.githubusercontent.com/38183707/43043680-5c56a4ba-8dcb-11e8-9033-6f678394d550.PNG)
 
 分三步走：
 
@@ -43,9 +42,11 @@ console.log(r);
 
 
 
-![004](.\images\004.png)
 
-![005](.\images\005.PNG)
+![004](https://user-images.githubusercontent.com/38183707/43043692-9200e436-8dcb-11e8-8632-75ce406ad841.png)
+
+![005](https://user-images.githubusercontent.com/38183707/43043697-9836341e-8dcb-11e8-98f8-36e91d5fc425.PNG)
+
 
 更改树的内容后
 
@@ -80,9 +81,11 @@ function Jomsou() {
 
 1、ES6箭头函数`let sum = (a, b)=>{return a+b};转化为ES5普通函数
 
-![001](.\images\001.PNG)
+![001](https://user-images.githubusercontent.com/38183707/43043719-e194bbf8-8dcb-11e8-91de-97fd8c34e874.PNG)
+![002](https://user-images.githubusercontent.com/38183707/43043720-e52bbf1e-8dcb-11e8-8fc4-0e958f92526b.PNG)
 
-![002](.\images\002.PNG)
+
+
 
 ```javascript
 const babel = require('babel-core');//babel核心解析库
@@ -276,11 +279,11 @@ console.log(d.code);
 
 3、实现模块的按需加载
 
-eg: ![010](.\images\010.png)
+eg: 
+![010](https://user-images.githubusercontent.com/38183707/43043699-a676bfb2-8dcb-11e8-852e-36c9f989c5c4.png)
+![006](https://user-images.githubusercontent.com/38183707/43043700-aae7ecba-8dcb-11e8-9bd5-06a0f23746c0.PNG)
+![007](https://user-images.githubusercontent.com/38183707/43043702-b1f721ba-8dcb-11e8-9f04-6db7849be827.PNG)
 
-![006](.\images\006.PNG)
-
-![007](.\images\007.PNG)
 
 ```javascript
 //babel-plugin-固定的前缀，放在node_module里
@@ -344,11 +347,14 @@ npx webpack
 
 前：
 
-![008](.\images\008.PNG)
+![008](https://user-images.githubusercontent.com/38183707/43043709-bdfa41b8-8dcb-11e8-9fde-f361f6d55eae.PNG)
+
 
 后：
 
-![009](.\images\009.PNG)
+![009](https://user-images.githubusercontent.com/38183707/43043712-c560e8f8-8dcb-11e8-9d66-0d94238c23dc.PNG)
+
+项目地址[babelPlugin](https://github.com/Zenquan/babelPlugin)
 
 参考地址：
 
