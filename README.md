@@ -343,7 +343,7 @@ import {Button} from 'antd';
 npx webpack
 ```
 
-用babel-plugin-czq-import前后的效果对比：
+用[babel-plugin-czq-import](https://github.com/Zenquan/babel-import-plugin/releases/tag/v1.0.0)前后的效果对比：
 
 前：
 
