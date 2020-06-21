@@ -1,6 +1,6 @@
 {
   "name": "babel-import-plugin",
-  "version": "1.2.0",
+  "version": "1.1.0",
   "description": "This is a project about babel plugin",
   "main": "index.js",
   "publishConfig": {
