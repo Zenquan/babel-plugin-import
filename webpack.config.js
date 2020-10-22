@@ -14,7 +14,7 @@ module.exports = {
                         'react'
                     ],
                     plugins: [
-                        'czq-import'
+                        // 'czq-import'
                     ]
                 }
             },exclude: /node_modules/}
