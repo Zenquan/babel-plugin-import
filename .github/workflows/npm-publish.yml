@@ -2,7 +2,7 @@ name: publish
 
 on:
   push:
-    branches: feature-dev 
+    branches: master
     paths:
         - 'lib/**'
 
