@@ -7,17 +7,21 @@ npm i @jomsou/babel-import-plugin -D
 
 ### 使用
 
-#### .babelrc配置
+#### babel.config.js配置
 ```js
-{
+const importPlugin = require('@jomsou/babel-import-plugin')
+
+module.exports = {
   "plugins": [
-    "czq-import"
+    importPlugin
   ]
 }
 ```
 
 #### webpack配置
 ```js
+const importPlugin = require('@jomsou/babel-import-plugin')
+
 rules: [
     {
       test: /\.js$/, use: {
@@ -28,7 +32,7 @@ rules: [
             'react'
         ],
         plugins: [
-            'czq-import'
+            importPlugin
         ]
       }
     }, exclude: /node_modules/}
@@ -47,4 +51,5 @@ rules: [
 
 更新日志：
 
-- 2020.11.10 加入github actions
+- 2020.11.10 完成v1.1.0并加入github actions
+- 2018.10.08 v1.0.0版本
