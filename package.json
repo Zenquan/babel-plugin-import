@@ -1,5 +1,5 @@
 {
-  "name": "@jomsou/babel-plugin-import",
+  "name": "@jomsou/babel-import-plugin",
   "version": "1.0.0",
   "description": "This is a project about babel plugin",
   "main": "./lib/index.js",
