@@ -1,3 +1,5 @@
+const importPlugin = require('@jomsou/babel-import-plugin')
+
 module.exports = {
     entry: "./test.js",
     output: {
@@ -9,12 +11,8 @@ module.exports = {
             {test: /\.js$/, use: {
                 loader: 'babel-loader',
                 options: {
-                    presets: [
-                        'env',
-                        'react'
-                    ],
                     plugins: [
-                        // 'czq-import'
+                        // importPlugin
                     ]
                 }
             },exclude: /node_modules/}

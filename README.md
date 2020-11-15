@@ -14,6 +14,7 @@ const importPlugin = require('@jomsou/babel-import-plugin')
 module.exports = {
   "plugins": [
     importPlugin
+    // new importPlugin()
   ]
 }
 ```
@@ -33,6 +34,7 @@ rules: [
         ],
         plugins: [
             importPlugin
+            // new importPlugin()
         ]
       }
     }, exclude: /node_modules/}

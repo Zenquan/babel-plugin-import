@@ -15,6 +15,8 @@
     "react-dom": "^17.0.0"
   },
   "devDependencies": {
+    "@jomsou/babel-import-plugin": "^1.0.0-master.3bbbcc8",
+    "babel-loader": "^8.2.0",
     "webpack": "^5.1.3",
     "webpack-cli": "^4.1.0"
   }
