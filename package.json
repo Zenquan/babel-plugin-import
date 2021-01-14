@@ -4,8 +4,11 @@
   "description": "This is a project about babel plugin",
   "main": "./lib/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "cross-env NODE_ENV=development webpack --config v1.0.0/babel-import-plugin/webpack.config.js",
+    "build": "rm -rf dist && cross-env NODE_ENV=production webpack --config build/build.js",
+    "start": "cross-env NODE_ENV=development webpack-dev-server --config build/start.js"
   },
+  "sideEffects": false,
   "keywords": [],
   "author": "jomsoucan@gmail.com",
   "license": "ISC",
