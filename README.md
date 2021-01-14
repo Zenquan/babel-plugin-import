@@ -1,26 +1,26 @@
-## babel-import-plugin
+## babel-plugin-import
 
 ### 安装
 ```bash
-npm i @jomsou/babel-import-plugin -D
+npm i @jomsou/babel-plugin-import -D
 ```
 
 ### 使用
 
 #### babel.config.js配置
 ```js
-const importPlugin = require('@jomsou/babel-import-plugin')
+const importPlugin = require('@jomsou/babel-plugin-import')
 
 module.exports = {
   "plugins": [
-    importPlugin
+    importPlugin()
   ]
 }
 ```
 
 #### webpack配置
 ```js
-const importPlugin = require('@jomsou/babel-import-plugin')
+const importPlugin = require('@jomsou/babel-plugin-import')
 
 rules: [
     {
@@ -32,7 +32,7 @@ rules: [
             'react'
         ],
         plugins: [
-            importPlugin
+            importPlugin()
         ]
       }
     }, exclude: /node_modules/}
