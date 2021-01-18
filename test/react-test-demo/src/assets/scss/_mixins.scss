@@ -1,0 +1,37 @@
+@mixin clearfix {
+  &::after {
+    clear: both;
+    content: "";
+    display: table;
+  }
+}
+
+@mixin on-click($self: false) {
+  @if $self {
+    &,
+    &:hover,
+    &:active,
+    &:focus {
+      @content;
+    }
+  } @else {
+    &:hover,
+    &:active,
+    &:focus {
+      @content;
+    }
+  }
+}
+
+@mixin on-hover($self: false) {
+  @if $self {
+    &,
+    &:hover {
+      @content;
+    }
+  } @else {
+    &:hover {
+      @content;
+    }
+  }
+}

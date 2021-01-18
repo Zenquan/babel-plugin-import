@@ -1,16 +1,21 @@
 {
-  "name": "@jomsou/babel-import-plugin",
+  "name": "@jomsou/babel-plugin-import",
   "version": "1.0.0",
   "description": "This is a project about babel plugin",
   "main": "./lib/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "cross-env NODE_ENV=development webpack --config v1.0.0/babel-plugin-import/webpack.config.js",
+    "build": "rm -rf dist && cross-env NODE_ENV=production webpack --config build/build.js",
+    "start": "cross-env NODE_ENV=development webpack-dev-server --config build/start.js"
   },
+  "sideEffects": false,
   "keywords": [],
   "author": "jomsoucan@gmail.com",
   "license": "ISC",
   "devDependencies": {
-    "babel-core": "^6.26.3",
+    "babel-core": "^6.26.3"
+  },
+  "dependencies": {
     "babel-types": "^6.26.0"
   }
 }

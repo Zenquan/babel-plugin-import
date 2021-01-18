@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import { Button } from 'element-ui'
+import Button from 'element-ui/lib/button'
 export default {
   name: 'HelloWorld',
   props: {
@@ -13,6 +13,9 @@ export default {
   },
   components: {
     Button
+  },
+  mounted() {
+    console.log('111>>>', 111);
   }
 }
 </script>

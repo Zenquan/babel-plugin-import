@@ -1,7 +1,9 @@
-const importPlugin = require('@jomsou/babel-import-plugin')
+const babelImportPlugin = require('@jomsou/babel-plugin-import');
 
 module.exports = {
-  "plugins": [
-    // importPlugin
+  presets: [
+  ],
+  plugins: [
+    babelImportPlugin(null, 'antd')
   ]
 }

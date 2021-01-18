@@ -1,27 +1,48 @@
-## babel-import-plugin
+## babel-plugin-import
 
 ### 安装
 ```bash
-npm i @jomsou/babel-import-plugin -D
+npm i @jomsou/babel-plugin-import -D
 ```
 
 ### 使用
 
-#### babel.config.js配置
+### API
 ```js
-const importPlugin = require('@jomsou/babel-import-plugin')
+importPlugin(libPath, libName)
+
+- libPath 库按需加载的路径，譬如antd的lib路径
+- libName 库名
+```
+
+<!-- #### .babelrc配置
+```js
 
 module.exports = {
   "plugins": [
+    "@jomsou/import"
+  ]
+}
+``` -->
+#### babel.config.js配置
+```js
+const importPlugin = require('@jomsou/babel-plugin-import')
+
+module.exports = {
+  "plugins": [
+<<<<<<< HEAD
     importPlugin
     // new importPlugin()
+=======
+    importPlugin(libPath, libName)
+>>>>>>> v1.1.0
   ]
 }
 ```
 
 #### webpack配置
 ```js
-const importPlugin = require('@jomsou/babel-import-plugin')
+const importPlugin = require('@jomsou/babel-plugin-import')
 
 rules: [
     {
@@ -33,8 +54,12 @@ rules: [
             'react'
         ],
         plugins: [
+<<<<<<< HEAD
             importPlugin
             // new importPlugin()
+=======
+            importPlugin(libPath, libName)
+>>>>>>> v1.1.0
         ]
       }
     }, exclude: /node_modules/}

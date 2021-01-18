@@ -1,0 +1,44 @@
+{
+  "background_color": "#ffffff",
+  "categories": ["react", "starter"],
+  "description": "React starter application.",
+  "dir": "ltr",
+  "display": "standalone",
+  "iarc_rating_id": "",
+  "icons": [],
+  "lang": "en-US",
+  "name": "React Starter",
+  "orientation": "any",
+  "prefer_related_applications": false,
+  "related_applications": [
+    {
+      "platform": "webapp",
+      "url": "",
+      "id": ""
+    }
+  ],
+  "scope": ".",
+  "screenshots": [
+    {
+      "src": "",
+      "sizes": "",
+      "type": ""
+    }
+  ],
+  "serviceworker": {
+    "src": "",
+    "scope": "",
+    "type": "",
+    "update_via_cache": "none"
+  },
+  "short_name": "ReactStarter",
+  "shortcuts": [
+    {
+      "name": "React Starter",
+      "url": "",
+      "description": "React starter application."
+    }
+  ],
+  "start_url": ".",
+  "theme_color": "#ffffff"
+}
