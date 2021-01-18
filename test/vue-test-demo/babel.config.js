@@ -5,6 +5,6 @@ module.exports = {
     '@vue/cli-plugin-babel/preset',
   ],
   plugins: [
-    babelImportPlugin()
+    babelImportPlugin(null, 'element-ui')
   ]
 }

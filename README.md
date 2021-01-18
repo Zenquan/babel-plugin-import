@@ -7,13 +7,30 @@ npm i @jomsou/babel-plugin-import -D
 
 ### 使用
 
+### API
+```js
+importPlugin(libPath, libName)
+
+- libPath 库按需加载的路径，譬如antd的lib路径
+- libName 库名
+```
+
+<!-- #### .babelrc配置
+```js
+
+module.exports = {
+  "plugins": [
+    "@jomsou/import"
+  ]
+}
+``` -->
 #### babel.config.js配置
 ```js
 const importPlugin = require('@jomsou/babel-plugin-import')
 
 module.exports = {
   "plugins": [
-    importPlugin()
+    importPlugin(libPath, libName)
   ]
 }
 ```
@@ -32,7 +49,7 @@ rules: [
             'react'
         ],
         plugins: [
-            importPlugin()
+            importPlugin(libPath, libName)
         ]
       }
     }, exclude: /node_modules/}

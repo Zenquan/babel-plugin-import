@@ -1,5 +1,7 @@
 import React, { FC, useEffect } from 'react';
-import { Button } from 'antd';
+import { Button, Alert } from 'antd';
+// import Button from 'antd/lib/button';
+// import Alert from 'antd/lib/alert';
 import { useCounter, UseCounter } from '../../redux/counter/use-counter';
 
 const Home: FC = () => {
@@ -18,6 +20,7 @@ const Home: FC = () => {
       <Button onClick={handleIncrementClick} type="primary">
         +
       </Button>
+      <Alert message="111" />
     </>
   );
 };
