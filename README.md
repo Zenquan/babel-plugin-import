@@ -30,12 +30,7 @@ const importPlugin = require('@jomsou/babel-plugin-import')
 
 module.exports = {
   "plugins": [
-<<<<<<< HEAD
-    importPlugin
-    // new importPlugin()
-=======
     importPlugin(libPath, libName)
->>>>>>> v1.1.0
   ]
 }
 ```
@@ -54,12 +49,7 @@ rules: [
             'react'
         ],
         plugins: [
-<<<<<<< HEAD
-            importPlugin
-            // new importPlugin()
-=======
-            importPlugin(libPath, libName)
->>>>>>> v1.1.0
+          importPlugin(libPath, libName)
         ]
       }
     }, exclude: /node_modules/}
