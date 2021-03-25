@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import Button from 'element-ui/lib/button'
+import {Button} from 'element-ui'
 export default {
   name: 'HelloWorld',
   props: {

@@ -7,37 +7,44 @@ npm i @jomsou/babel-plugin-import -D
 
 ### 使用
 
-### API
-```js
-importPlugin(libPath, libName)
+### 插件选项
 
-- libPath 库按需加载的路径，譬如antd的lib路径
-- libName 库名
-```
-
-<!-- #### .babelrc配置
+| Param | Type | Default | Description |
+| --- | --- | --- | --- |
+| libName | <code>String</code> | null | 作用的组件库包名  |
+| libPath | <code>String</code> | lib | 作用的目录，eg：'antd/lib/button' -> libPath: "lib" |
+| disable | <code>Boolean</code> | false | true为不起作用，false为起作用。
+#### .babelrc配置
 ```js
 
 module.exports = {
   "plugins": [
-    "@jomsou/import"
+    ["@jomsou/import", {
+      "libName": "antd",
+      "libPath": "lib",
+      "disable": process.env.NODE_ENV === 'development'
+    }]
   ]
 }
-``` -->
+```
 #### babel.config.js配置
 ```js
-const importPlugin = require('@jomsou/babel-plugin-import')
+const babelImportPlugin = require('@jomsou/babel-plugin-import')
 
 module.exports = {
   "plugins": [
-    importPlugin(libPath, libName)
+    [babelImportPlugin, {
+      libName: "antd",
+      libPath: "lib",
+      disable: process.env.NODE_ENV === 'development'
+    }]
   ]
 }
 ```
 
 #### webpack配置
 ```js
-const importPlugin = require('@jomsou/babel-plugin-import')
+const babelImportPlugin = require('@jomsou/babel-plugin-import')
 
 rules: [
     {
@@ -49,13 +56,19 @@ rules: [
             'react'
         ],
         plugins: [
-          importPlugin(libPath, libName)
+          [babelImportPlugin, {
+            libName: 'antd',
+            libPath: 'lib',
+            disable: process.env.NODE_ENV === 'development'
+          }]
         ]
       }
     }, exclude: /node_modules/}
   ]
 }
 ```
+
+antd
 
 前：
 
@@ -66,7 +79,16 @@ rules: [
 
 ![009](https://user-images.githubusercontent.com/38183707/43043712-c560e8f8-8dcb-11e8-9d66-0d94238c23dc.PNG)
 
+element-ui
+![](https://cdn.jsdelivr.net/gh/zenquan/diagrams@master/img/babel-plugin-import前.png)
+
+
+后：
+
+![](https://cdn.jsdelivr.net/gh/zenquan/diagrams@master/img/babel-plugin-import后.png)
+
 更新日志：
 
+- 2021.03.25 修复已知问题
 - 2020.11.10 完成v1.1.0并加入github actions
 - 2018.10.08 v1.0.0版本

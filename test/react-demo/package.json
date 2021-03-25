@@ -120,8 +120,8 @@
     "workbox-webpack-plugin": "5.1.4"
   },
   "scripts": {
-    "start": "node scripts/start.js",
-    "build": "node scripts/build.js",
+    "start": "NODE_ENV=development node scripts/start.js",
+    "build": "NODE_ENV=production node scripts/build.js",
     "test": "node scripts/test.js --env=jsdom",
     "analyze": "source-map-explorer 'build/static/js/*.js'",
     "icons": "pwa-asset-generator ./src/assets/images/icons/logo.svg ./public/static/images/icons -i ./public/index.html -f -m ./public/manifest.json -o false -t png -v static/images/icons",

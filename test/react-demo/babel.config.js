@@ -4,6 +4,10 @@ module.exports = {
   presets: [
   ],
   plugins: [
-    babelImportPlugin(null, 'antd')
+    // [babelImportPlugin, {
+    //   libName: 'antd',
+    //   libPath: 'lib',
+    //   disable: process.env.NODE_ENV === 'development'
+    // }]
   ]
 }
