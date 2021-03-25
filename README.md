@@ -80,12 +80,14 @@ antd
 ![009](https://user-images.githubusercontent.com/38183707/43043712-c560e8f8-8dcb-11e8-9d66-0d94238c23dc.PNG)
 
 element-ui
-![](https://cdn.jsdelivr.net/gh/zenquan/diagrams@master/img/babel-plugin-import前.png)
 
+前：
+
+![](https://cdn.jsdelivr.net/gh/zenquan/diagrams@master/img/babel-plugin-import后.png)
 
 后：
 
-![](https://cdn.jsdelivr.net/gh/zenquan/diagrams@master/img/babel-plugin-import后.png)
+![](https://cdn.jsdelivr.net/gh/zenquan/diagrams@master/img/babel-plugin-import前.png)
 
 更新日志：
 
