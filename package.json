@@ -1,6 +1,6 @@
 {
   "name": "@jomsou/babel-plugin-import",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "This is a project about babel plugin",
   "main": "./lib/index.js",
   "scripts": {
